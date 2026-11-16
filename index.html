@@ -95,6 +95,28 @@ nav.dny-shared-navigation .dny-nav-favorites b{position:absolute;right:-1px;top:
     #cam-ket .dny-service-promises article { transition:transform 200ms,box-shadow 200ms; }
     #cam-ket .dny-service-promises article:hover { transform:translateY(-4px); box-shadow:0 12px 26px #153b7320; }
   }
+}
+/* The moving halo sits outside the icon, keeping the lettering steady. */
+#cam-ket .dny-reason-icon { position: relative; isolation: isolate; }
+#cam-ket .dny-reason-icon::before {
+  content: ""; position: absolute; inset: -2px; border-radius: inherit;
+  border: 2px solid currentColor; opacity: .18; pointer-events: none;
+}
+#cam-ket h2::after {
+  width: 88px; height: 4px; border-radius: 2px;
+  background: linear-gradient(90deg,#115abf 20%,#72d4ff 50%,#115abf 80%);
+  background-size: 200% 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  #cam-ket .dny-reason-icon::before { animation: dny-halo 3s ease-out infinite; }
+  #cam-ket .dny-reasons-grid article:nth-child(2) .dny-reason-icon::before { animation-delay: -.9s; }
+  #cam-ket .dny-reasons-grid article:nth-child(3) .dny-reason-icon::before { animation-delay: -1.8s; }
+  #cam-ket h2::after { animation: dny-title-glint 3s linear infinite; }
+  @keyframes dny-halo {
+    0% { transform: scale(.96); opacity: .65; }
+    78%, 100% { transform: scale(1.35); opacity: 0; }
+  }
+  @keyframes dny-title-glint { to { background-position: -200% 0; } }
 }</style><section class="dny-reasons" id="cam-ket" aria-labelledby="dny-reasons-title"><div class="dny-reasons-inner"><h2 id="dny-reasons-title">VÌ SAO NÊN CHỌN <em>DNY.COM.VN</em></h2><div class="dny-reasons-grid"><article><div class="dny-reason-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="10" r="4"/><path d="M8 26v-4a8 8 0 0 1 16 0v4M5 14a3 3 0 0 1 0-6m22 6a3 3 0 0 0 0-6M3 24v-3a5 5 0 0 1 3-4m23 7v-3a5 5 0 0 0-3-4"/></svg></div><div><h3>CHÚNG TÔI</h3><p>Đội ngũ thiết kế – tư vấn chuyên nghiệp, công nhân tay nghề cao.</p></div></article><article><div class="dny-reason-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h16v15H3zM19 13h5l5 6v4H19M20 14v5h8"/><circle cx="9" cy="24" r="3"/><circle cx="24" cy="24" r="3"/><path d="m7 14 3 3 5-6"/></svg></div><div><h3>CAM KẾT GIAO HÀNG</h3><p>Đúng thời gian – Đúng số lượng – Đúng size.</p></div></article><article><div class="dny-reason-icon dny-reason-quality"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="12" r="9"/><path d="m12 12 3 3 5-6M9 19l-4 11 7-3 4 3 2-9M23 19l4 11-7-3"/></svg></div><div><h3>CAM KẾT SẢN PHẨM</h3><p>Đúng chất lượng – Đúng thiết kế – Đúng chất liệu vải.</p></div></article></div><div class="dny-service-promises" aria-label="Cam kết đồng hành cùng khách hàng">
 <article><span class="promise-number">01</span><h3>ĐẶT MAY TỪ 1 ÁO</h3><p>Nhận đơn từ 1 áo, không giới hạn số lượng — linh hoạt cho khách hàng cá nhân, đội nhóm và doanh nghiệp.</p></article>
 <article><span class="promise-number">02</span><h3>HỖ TRỢ ĐƠN HÀNG GẤP</h3><p>Hỗ trợ nhận đơn gấp, trao đổi rõ thời gian cần nhận để thống nhất tiến độ phù hợp.</p></article>
