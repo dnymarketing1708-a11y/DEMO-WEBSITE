@@ -162,6 +162,22 @@ setTimeout(function() {
 .gs-actions a:last-child { color: white; background: #0759ae; }
 @media (max-width:767px) { .gs-order-grid { grid-template-columns: 1fr; gap: 18px; } .gs-order .gs-quote { padding: 16px; } }
 </style>
+<style>
+.gs-faq { max-width: 900px; margin: 0 auto; color: #20242a; }
+.gs-faq h2 { margin: 0 0 8px; color: #15191e; font-size: 24px; font-weight: 700; }
+.gs-faq-intro { margin: 0 0 18px; color: #536273; font-size: 15px; line-height: 1.55; }
+.gs-faq details { border: 1px solid #dce4ef; border-radius: 8px; background: #fff; margin: 0 0 10px; overflow: hidden; }
+.gs-faq summary { position: relative; padding: 14px 44px 14px 16px; cursor: pointer; color: #172b44; font-size: 15px; font-weight: 700; line-height: 1.45; list-style: none; }
+.gs-faq summary::-webkit-details-marker { display: none; }
+.gs-faq summary::after { content: '+'; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: #0759ae; font-size: 22px; font-weight: 500; }
+.gs-faq details[open] summary { background: #f5f9ff; border-bottom: 1px solid #e1e9f3; }
+.gs-faq details[open] summary::after { content: '−'; }
+.gs-faq details p { margin: 0; padding: 13px 16px 16px; color: #485563; font-size: 15px; line-height: 1.65; }
+.gs-faq-contact { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 18px; padding: 15px; border-radius: 8px; background: #f5f8fc; }
+.gs-faq-contact a { padding: 8px 12px; border: 1px solid #b8cce4; border-radius: 6px; background: #fff; color: #064f9e; font-weight: 700; }
+.gs-faq-contact a:last-child { background: #0759ae; color: #fff; }
+@media(max-width:600px) { .gs-faq summary, .gs-faq details p { font-size: 14px; } }
+</style>
 </head>
 
 <body>
@@ -2499,7 +2515,23 @@ $(document).on('click', '#lightbox-custom', function (e) {
 			<div class=""><p class="tt_ml">Dữ liệu đang được cập nhật!</p></div>		</div>
         
 		<div class="tab-content" id="faq">
-			<div class=""><p class="tt_ml">Dữ liệu đang được cập nhật!</p></div>        </div>
+          <section class="gs-faq" aria-labelledby="gs-faq-title">
+            <h2 id="gs-faq-title">Câu hỏi thường gặp</h2>
+            <p class="gs-faq-intro">Giải đáp nhanh những điều bạn cần biết khi đặt áo bóng chuyền thiết kế riêng tại DNY SPORT.</p>
+            <details><summary>Áo nhận được có giống mẫu thiết kế đã duyệt không?</summary><p>DNY SPORT trao đổi và xác nhận mẫu trước khi sản xuất. Bạn nên kiểm tra màu sắc, họa tiết, logo và các chi tiết in để thống nhất thiết kế cuối cùng.</p></details>
+            <details><summary>DNY SPORT hỗ trợ chọn size cho từng thành viên như thế nào?</summary><p>DNY SPORT tư vấn size theo thông tin bạn cung cấp. Bạn có thể dùng công cụ gợi ý size theo chiều cao và cân nặng ở phía trên, hoặc gửi số đo nếu cần tư vấn thêm.</p></details>
+            <details><summary>Chỉ có ý tưởng, chưa có bản thiết kế thì có đặt áo được không?</summary><p>Được. Bạn chia sẻ màu sắc, phong cách mong muốn hoặc gửi hình tham khảo. DNY SPORT sẽ trao đổi để phát triển phương án thiết kế theo ý tưởng của bạn.</p></details>
+            <details><summary>Đội ít người có thể đặt áo thiết kế riêng không?</summary><p>DNY SPORT nhận đặt từ 1 áo, phù hợp cho cá nhân, đội nhóm và doanh nghiệp. Bạn có thể đặt bổ sung từ 1 áo với mức giá mỗi áo giữ như đơn hàng đầu tiên.</p></details>
+            <details><summary>Làm sao biết chi phí trước khi đặt sản xuất?</summary><p>Giá tùy thuộc vào mẫu áo, chất liệu vải và các yêu cầu cụ thể. Gửi thông tin đơn hàng để DNY SPORT tư vấn và báo giá trước khi bạn quyết định.</p></details>
+            <details><summary>Thời gian sản xuất áo bóng chuyền là bao lâu?</summary><p>Thời gian dự kiến từ 5–7 ngày, chưa gồm vận chuyển. DNY SPORT có hỗ trợ đơn gấp. Hãy cung cấp ngày cần sử dụng và địa chỉ nhận hàng để được xác nhận tiến độ phù hợp.</p></details>
+            <details><summary>Có thể yêu cầu chỉnh sửa thiết kế trước khi sản xuất không?</summary><p>Bạn có thể góp ý trong quá trình duyệt mẫu. Các chỉnh sửa cần được thống nhất trước khi xác nhận thiết kế cuối cùng để sản xuất.</p></details>
+            <details><summary>Đặt online thế nào để hạn chế sản phẩm sai yêu cầu?</summary><p>Trước khi sản xuất, hãy kiểm tra và xác nhận mẫu thiết kế, chất liệu, số lượng, size, thông tin in và địa chỉ nhận hàng. DNY SPORT sẽ trao đổi để hai bên thống nhất các chi tiết đơn hàng.</p></details>
+            <details><summary>Mỗi thành viên có thể in tên và số áo riêng không?</summary><p>Được. Gửi danh sách tên, số áo và size của từng thành viên. Vui lòng kiểm tra chính tả và các thông tin trước khi duyệt sản xuất.</p></details>
+            <details><summary>Làm sao tổng hợp size, tên và số áo cho cả đội?</summary><p>Bạn nên lập danh sách theo từng thành viên gồm họ tên, size, số áo và yêu cầu cá nhân hóa. DNY SPORT sẽ đối chiếu các thông tin này với đơn hàng trước khi sản xuất.</p></details>
+            <details><summary>Có thể đặt trước một áo mẫu rồi mới đặt số lượng lớn không?</summary><p>Có thể đặt một áo trước để tham khảo mẫu. Giá áo mẫu phụ thuộc vào thiết kế và yêu cầu thực tế, DNY SPORT sẽ báo giá trước. Khi đã chốt đơn, bạn có thể đặt bổ sung từ 1 áo với mức giá mỗi áo như đơn hàng đầu tiên.</p></details>
+            <div class="gs-faq-contact"><strong>Cần tư vấn thêm?</strong><a href="tel:+84909362079">Gọi 0909 362 079</a><a href="https://zalo.me/0909362079" target="_blank" rel="noopener">Chat qua Zalo</a></div>
+          </section>
+        </div>
     </div>
     	<script>
         const tabs = document.querySelectorAll('.tab');
