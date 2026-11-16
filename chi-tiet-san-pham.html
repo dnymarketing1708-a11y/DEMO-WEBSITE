@@ -106,6 +106,25 @@ setTimeout(function() {
 .dny-product-contact { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; width: min(274px, 100%); min-height: 40px; border: 2px solid #d71920; border-radius: 5px; background: white; color: #bd1219; font: bold 16px Arial, sans-serif; text-decoration: none; }
 .dny-product-contact:hover, .dny-product-contact:focus-visible { background: #bd1219; color: white; }
 </style>
+<style id="product-layout">
+.ct_pro .row-product { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(20px, 3vw, 40px); margin: 0; align-items: start; }
+.ct_pro .row-product::before, .ct_pro .row-product::after { display: none; }
+.row-product > .product-images, .row-product > .product-info { min-width: 0; width: 100%; padding: 0; }
+.row-product .mg-container, .row-product .mg-main-box { width: 100%; max-width: 100%; }
+.row-product #mgMainImage { display: block; width: 100%; height: auto; object-fit: contain; }
+.row-product .mg-thumbs { display: flex; gap: 8px; overflow-x: auto; margin-top: 8px; }
+.row-product .mg-thumb-item { flex: 0 0 min(16%, 72px); min-width: 0; }
+.row-product .mg-thumb-item img { width: 100%; height: auto; display: block; }
+.product-info .name_pro_de { margin: 0 0 12px; line-height: 1.3; overflow-wrap: anywhere; }
+.product-info .gg { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; height: auto; margin: 0 0 12px; padding: 0; }
+.product-info .gg li { margin: 0; }
+.product-info #like_face { display: none; }
+.product-info .fa-heart::before, .giohangt .fa-heart::before { content: "♥"; font-family: Arial, sans-serif; }
+.breadcrumb .glyphicon-link { display: none; }
+@media (max-width: 767px) {
+  .ct_pro .row-product { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+}
+</style>
 </head>
 
 <body>
@@ -1407,7 +1426,7 @@ setTimeout(function() {
                                         updateState();
 
                                         // Fix local images due to <base> tag
-                                        var localPath = window.location.href.replace(/\/[^\/]*$/, '/');
+                                        var localPath = document.baseURI;
                                         $('.dny-social-btn img').each(function () {
                                             var currentSrc = $(this).attr('src');
                                             if (!currentSrc.startsWith('http')) {
@@ -1518,7 +1537,7 @@ setTimeout(function() {
                   
                     <script>
         (function () {
-            var baseUri = window.location.href.replace(/\/[^\/]*$/, '/');
+            var baseUri = document.baseURI;
             document.write('<link rel="stylesheet" href="' + baseUri + 'size/dny-styles.css">');
             document.write('<link rel="stylesheet" href="' + baseUri + 'size/tool-size.css">');
             document.write('<script src="' + baseUri + 'size/dny-scripts.js"><\/script>');
