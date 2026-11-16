@@ -121,7 +121,49 @@ nav.dny-shared-navigation .dny-nav-favorites b{position:absolute;right:-1px;top:
 #cam-ket .dny-service-promises article { display: grid; grid-template-columns: 26px 1fr; align-content: start; align-items: center; gap: 8px; padding: 15px 16px; border-radius: 10px; }
 #cam-ket .dny-service-promises .promise-number { width: 26px; height: 26px; margin: 0; border-radius: 7px; font-size: 12px; }
 #cam-ket .dny-service-promises h3 { margin: 0; font-size: 16px; line-height: 1.3; }
-#cam-ket .dny-service-promises p { grid-column: 1 / -1; line-height: 1.5; }</style><section class="dny-reasons" id="cam-ket" aria-labelledby="dny-reasons-title"><div class="dny-reasons-inner"><h2 id="dny-reasons-title">VÌ SAO NÊN CHỌN <em>DNY.COM.VN</em></h2><div class="dny-reasons-grid"><article><div class="dny-reason-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="10" r="4"/><path d="M8 26v-4a8 8 0 0 1 16 0v4M5 14a3 3 0 0 1 0-6m22 6a3 3 0 0 0 0-6M3 24v-3a5 5 0 0 1 3-4m23 7v-3a5 5 0 0 0-3-4"/></svg></div><div><h3>CHÚNG TÔI</h3><p>Đội ngũ thiết kế – tư vấn chuyên nghiệp, công nhân tay nghề cao.</p></div></article><article><div class="dny-reason-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h16v15H3zM19 13h5l5 6v4H19M20 14v5h8"/><circle cx="9" cy="24" r="3"/><circle cx="24" cy="24" r="3"/><path d="m7 14 3 3 5-6"/></svg></div><div><h3>CAM KẾT GIAO HÀNG</h3><p>Đúng thời gian – Đúng số lượng – Đúng size.</p></div></article><article><div class="dny-reason-icon dny-reason-quality"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="12" r="9"/><path d="m12 12 3 3 5-6M9 19l-4 11 7-3 4 3 2-9M23 19l4 11-7-3"/></svg></div><div><h3>CAM KẾT SẢN PHẨM</h3><p>Đúng chất lượng – Đúng thiết kế – Đúng chất liệu vải.</p></div></article></div><div class="dny-service-promises" aria-label="Cam kết đồng hành cùng khách hàng">
+#cam-ket .dny-service-promises p { grid-column: 1 / -1; line-height: 1.5; }
+#cam-ket .dny-customer-message {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid #4b98d8;
+  border-radius: 14px;
+  background: linear-gradient(112deg,#0b2345 8%,#103663 55%,#115085);
+  box-shadow: 0 10px 28px #133d7029;
+}
+#cam-ket .dny-customer-message::before,
+#cam-ket .dny-customer-message::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+#cam-ket .dny-customer-message::before {
+  inset: -35% -55%;
+  background: linear-gradient(114deg,transparent 42%,#26acff30 48%,#80dfff36 50%,transparent 56%);
+}
+#cam-ket .dny-customer-message::after {
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(from var(--dny-message-angle,0deg),#50b7ff44 0deg 215deg,#46bcff 270deg,#dcfaff 295deg,#50b7ff44 335deg);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+@property --dny-message-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@media (prefers-reduced-motion:no-preference) {
+  #cam-ket .dny-customer-message::before { animation: dny-message-sweep 5s ease-in-out infinite; }
+  #cam-ket .dny-customer-message::after { animation: dny-message-edge 6s linear infinite; }
+  @keyframes dny-message-sweep {
+    0%,100% { transform: translateX(-33%); }
+    50% { transform: translateX(33%); }
+  }
+  @keyframes dny-message-edge { to { --dny-message-angle: 360deg; } }
+}</style><section class="dny-reasons" id="cam-ket" aria-labelledby="dny-reasons-title"><div class="dny-reasons-inner"><h2 id="dny-reasons-title">VÌ SAO NÊN CHỌN <em>DNY.COM.VN</em></h2><div class="dny-reasons-grid"><article><div class="dny-reason-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="10" r="4"/><path d="M8 26v-4a8 8 0 0 1 16 0v4M5 14a3 3 0 0 1 0-6m22 6a3 3 0 0 0 0-6M3 24v-3a5 5 0 0 1 3-4m23 7v-3a5 5 0 0 0-3-4"/></svg></div><div><h3>CHÚNG TÔI</h3><p>Đội ngũ thiết kế – tư vấn chuyên nghiệp, công nhân tay nghề cao.</p></div></article><article><div class="dny-reason-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h16v15H3zM19 13h5l5 6v4H19M20 14v5h8"/><circle cx="9" cy="24" r="3"/><circle cx="24" cy="24" r="3"/><path d="m7 14 3 3 5-6"/></svg></div><div><h3>CAM KẾT GIAO HÀNG</h3><p>Đúng thời gian – Đúng số lượng – Đúng size.</p></div></article><article><div class="dny-reason-icon dny-reason-quality"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="12" r="9"/><path d="m12 12 3 3 5-6M9 19l-4 11 7-3 4 3 2-9M23 19l4 11-7-3"/></svg></div><div><h3>CAM KẾT SẢN PHẨM</h3><p>Đúng chất lượng – Đúng thiết kế – Đúng chất liệu vải.</p></div></article></div><div class="dny-service-promises" aria-label="Cam kết đồng hành cùng khách hàng">
 <article><span class="promise-number">01</span><h3>Đặt may từ 1 áo</h3><p>Từ 1 áo đến số lượng không giới hạn cho cá nhân, đội nhóm và doanh nghiệp.</p></article>
 <article><span class="promise-number">02</span><h3>Hỗ trợ đơn gấp</h3><p>Cho DNY biết ngày cần áo để được tư vấn tiến độ phù hợp.</p></article>
 <article><span class="promise-number">03</span><h3>Đặt thêm, giữ giá</h3><p>Đặt bổ sung từ 1 áo với đơn giá như lần đầu.</p></article>
@@ -130,7 +172,7 @@ nav.dny-shared-navigation .dny-nav-favorites b{position:absolute;right:-1px;top:
 <article><span class="promise-number">06</span><h3>Đa dạng rập áo</h3><p>Chọn dáng áo phù hợp với từng môn thể thao và người mặc.</p></article>
 <article><span class="promise-number">07</span><h3>Chỉnh theo yêu cầu</h3><p>Góp ý về màu, họa tiết và vị trí logo trước khi duyệt mẫu.</p></article>
 <article><span class="promise-number">08</span><h3>In tên và số riêng</h3><p>Cá nhân hóa từng áo theo danh sách thành viên của đội.</p></article></div>
-<div class="dny-customer-message"><span>ĐIỀU DNY TRÂN TRỌNG</span><h3>Sự hài lòng hôm nay. Niềm tin cho những lần trở lại.</h3><p>DNY SPORT không chỉ mong muốn mang đến những sản phẩm chất lượng, mà còn chú trọng từng trải nghiệm của khách hàng. Bởi với DNY, thành công không chỉ nằm ở số lượng đơn hàng, mà còn ở sự hài lòng, niềm tin và những lần khách hàng tiếp tục quay lại lựa chọn chúng tôi.</p></div></div></section><script>
+<div class="dny-customer-message" id="dieu-dny-tran-trong"><span>ĐIỀU DNY TRÂN TRỌNG</span><h3>Sự hài lòng hôm nay. Niềm tin cho những lần trở lại.</h3><p>DNY SPORT không chỉ mong muốn mang đến những sản phẩm chất lượng, mà còn chú trọng từng trải nghiệm của khách hàng. Bởi với DNY, thành công không chỉ nằm ở số lượng đơn hàng, mà còn ở sự hài lòng, niềm tin và những lần khách hàng tiếp tục quay lại lựa chọn chúng tôi.</p></div></div></section><script>
 (() => {
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const observer = new IntersectionObserver(entries => {
