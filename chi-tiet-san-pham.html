@@ -1190,8 +1190,115 @@ setTimeout(function() {
                                 </div>
                                 
                                 
-                                <div class="sizebox">
-                                										                				</div>
+                                <div class="sizebox"><!-- COMPONENT CHỌN SIZE -->
+        
+                <div class="size-suggestion-widget"
+                                    style="margin: 20px 0; font-family: 'Be Vietnam Pro', sans-serif;">
+
+                                    <div class="sz-gender-tabs" style="display: flex; gap: 8px; margin-bottom: 12px; background: #f1f5f9; padding: 4px; border-radius: 8px;">
+                                        <button id="szTabMale" class="sz-tab active" onclick="szSetGender('male')" style="flex: 1; padding: 8px 0; border: none; border-radius: 6px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.1); color: #0f172a; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s;">Nam</button>
+                                        <button id="szTabFemale" class="sz-tab" onclick="szSetGender('female')" style="flex: 1; padding: 8px 0; border: none; border-radius: 6px; background: transparent; color: #64748b; font-weight: 500; font-size: 14px; cursor: pointer; transition: all 0.2s;">Nữ</button>
+                                        <button id="szTabKids" class="sz-tab" onclick="szSetGender('kids')" style="flex: 1; padding: 8px 0; border: none; border-radius: 6px; background: transparent; color: #64748b; font-weight: 500; font-size: 14px; cursor: pointer; transition: all 0.2s;">Trẻ em</button>
+                                    </div>
+
+                                    <div class="sz-row">
+                                        <div class="sz-col">
+                                            <label class="sz-label">Chiều cao (cm) <span
+                                                    style="color:#dc2626">*</span></label>
+                                            <input type="text" id="szHeight" class="sz-input" placeholder="172">
+                                        </div>
+                                        <div class="sz-col">
+                                            <label class="sz-label">Cân nặng (kg) <span
+                                                    style="color:#dc2626">*</span></label>
+                                            <input type="text" id="szWeight" class="sz-input" placeholder="68">
+                                        </div>
+                                    </div>
+                                    <div class="sz-row" style="margin-bottom:0;">
+                                        <button class="sz-btn" type="button" onclick="szSuggest()">GỢI Ý SIZE</button>
+                                    </div>
+                                    <div id="szErr" class="sz-error">Vui lòng nhập chiều cao và cân nặng hợp lệ.</div>
+
+                                    <div id="szDefaultInfo" class="sz-result-box" style="display: block;">
+                                        <div class="sz-result-title" style="color:#334155;">Kết quả gợi ý theo <strong
+                                                style="font-weight:600; color:#0b3954;">chiều cao & cân nặng</strong>
+                                            <span id="szGenderTitleDefault">Size nam.</span>
+                                        </div>
+                                        <div class="sz-grid">
+                                            <div class="sz-card"
+                                                style="border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                                                <div class="sz-card-title"><span class="sz-num"
+                                                        style="background: #e0e7ff; color: #3730a3;">1</span> <span
+                                                        style="color: #1e293b;">Size đề xuất</span></div>
+                                                <div class="sz-info"
+                                                    style="font-size: 14px; margin-top: 8px; line-height: 1.5; color: #334155;">
+                                                    <strong style="color: #0f172a; font-weight: 700;">Size đề
+                                                        xuất</strong> là size chuẩn DNY chọn theo chiều cao cân nặng.
+                                                </div>
+                                            </div>
+                                            <div class="sz-card"
+                                                style="border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                                                <div class="sz-card-title"><span class="sz-num"
+                                                        style="background: #e0e7ff; color: #3730a3;">2</span> <span
+                                                        style="color: #1e293b;">Size tuỳ chỉnh</span></div>
+                                                <div class="sz-info"
+                                                    style="font-size: 14px; margin-top: 8px; line-height: 1.5; color: #334155;">
+                                                    <strong style="color: #0f172a; font-weight: 700;">Size tùy
+                                                        chỉnh</strong> là size được tăng/ cắt lai để phù hợp nhất với
+                                                    chiều cao cân nặng <span style="color: #dc2626;">(có thể phát sinh
+                                                        thêm chi phí)</span>.
+                                                    <br><br><i style="color:#64748b; font-size:12px;">* Lưu ý: Một số rập đặc biệt không thể tăng cắt lai.</i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="szResult" class="sz-result-box">
+                                        <div class="sz-result-title">Kết quả gợi ý theo <strong
+                                                style="font-weight:600">chiều cao & cân nặng</strong> <span id="szGenderTitleResult">Size Nam.</span>
+                                        </div>
+                                        <div class="sz-grid">
+                                            <div class="sz-card">
+                                                <div class="sz-card-title"><span class="sz-num">1</span> Size đề xuất
+                                                </div>
+                                                <div
+                                                    style="display:flex; align-items:center; margin-top:5px; margin-bottom:8px;">
+                                                    <span>Size đề xuất: </span><span class="sz-badge"
+                                                        id="szCodeMain">2XL</span>
+                                                </div>
+                                                <div class="sz-info">
+                                                    <span>Phân loại: </span><b id="szShape">Dáng chuẩn (BMI
+                                                        19-24)</b><br>
+                                                    <span id="szBmiLine"><span>BMI: </span><span id="szBmi">23.0</span><br></span>
+                                                    <i id="szLogic" style="display:block; margin-top:3px;">"Cân đối,
+                                                        chọn size theo chiều cao."</i>
+                                                </div>
+                                            </div>
+                                            <div class="sz-card">
+                                                <div class="sz-card-title"><span class="sz-num">2</span> Size tuỳ chỉnh
+                                                </div>
+                                                <div
+                                                    style="display:flex; align-items:center; margin-top:5px; margin-bottom:8px;">
+                                                    <span>Size tuỳ chỉnh: </span><span class="sz-badge"
+                                                        id="szCodeCustom">2XL</span>
+                                                </div>
+                                                <div class="sz-cut" id="szCut">Giữ nguyên</div>
+                                                <div class="sz-info" id="szCutLogic">Chiều dài áo tương đối phù hợp.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="szNoteWrap" style="margin-top:12px; font-size:14px; text-align:center;"></div>
+                                    </div>
+
+                                    <a href="https://dny.com.vn/size/Index.html" target="_blank" rel="noopener"
+                                        class="sz-btn-secondary"
+                                        style="display: block; text-align: center; text-decoration: none; box-sizing: border-box;">CHỌN
+                                        SIZE THEO BẢNG THÔNG SỐ</a>
+
+
+
+
+                                </div>
+                 <!-- KẾT THÚC COMPONENT CHỌN SIZE --></div>
 
         </div>
         <div class="col-12 col-md-7 product-info">
@@ -1474,67 +1581,7 @@ setTimeout(function() {
                   </div>
                   
                   
-                    <div class="size-boxmb">
-        					        			</div>
-                  <script>
-(function () {
-
-    function isMobile() {
-        return window.matchMedia("(max-width: 767px)").matches;
-    }
-
-    function loadSize() {
-        const mb = document.querySelector(".size-boxmb");
-        const des = document.querySelector(".sizebox");
-
-        if (!mb || !des) return;
-
-        // Xóa sạch cả 2 trước (tránh xung đột)
-        mb.innerHTML = "";
-        des.innerHTML = "";
-
-        // Xác định target
-        let target, device;
-
-        if (isMobile()) {
-            target = mb;
-            device = 'mobile';
-        } else {
-            target = des;
-            device = 'desktop';
-        }
-
-        // GỌI AJAX 1 LẦN DUY NHẤT
-        $.ajax({
-            type: 'POST',
-            url: 'https://dny.com.vn/sanpham/size',
-            data: { },
-            success: function (html) {
-
-                // Nếu HTML có <script> thì xử lý luôn
-                target.innerHTML = html;
-
-                // chạy script bên trong (nếu có)
-                target.querySelectorAll("script").forEach(oldScript => {
-                    const newScript = document.createElement("script");
-                    newScript.textContent = oldScript.textContent;
-                    document.body.appendChild(newScript);
-                    oldScript.remove();
-                });
-
-            }
-        });
-    }
-
-    // chạy lần đầu
-    document.addEventListener("DOMContentLoaded", loadSize);
-
-    // khi resize (chỉ reload lại nếu đổi mobile <-> desktop)
-    const media = window.matchMedia("(max-width: 767px)");
-    media.addEventListener("change", loadSize);
-
-})();
-</script>
+                    
                   
                     <script>
         (function () {
