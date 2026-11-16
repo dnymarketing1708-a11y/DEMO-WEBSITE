@@ -144,6 +144,21 @@ setTimeout(function() {
 #goi-y-size { scroll-margin-top: 80px; }
 @media(max-width: 767px) { .gs-guide .gs-prep, .gs-guide .gs-specs { grid-template-columns: 1fr; } }
 </style>
+<style>
+.gs-order .gs-quote { padding: 20px 24px; border-left: 3px solid #0759ae; background: #f5f8fc; }
+.gs-order h2 { margin: 0 0 12px; scroll-margin-top: 80px; }
+.gs-order-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 32px; margin-top: 24px; }
+.gs-order-grid section { border-top: 1px solid #dce2eb; padding-top: 16px; }
+.gs-order-grid ul { padding: 0 0 0 20px; margin: 0; list-style: disc; }
+.gs-order-grid li { display: list-item; list-style: disc; font-size: 15px; line-height: 1.55; margin-bottom: 6px; }
+.gs-order-grid li::marker { color: #0759ae; }
+.gs-order p + p, .gs-order p + a { margin-top: 10px; }
+.gs-order-grid p + a { display: inline-block; }
+.gs-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.gs-actions a { padding: 8px 14px; border: 1px solid #0759ae; border-radius: 5px; font-weight: 600; }
+.gs-actions a:last-child { color: white; background: #0759ae; }
+@media (max-width:767px) { .gs-order-grid { grid-template-columns: 1fr; gap: 18px; } .gs-order .gs-quote { padding: 16px; } }
+</style>
 </head>
 
 <body>
@@ -1913,7 +1928,7 @@ $(document).on('click', '#lightbox-custom', function (e) {
 					});
 				});
 			</script>
-			<div class="wap_ml"><p class="tt_ml">Tóm tắt nội dung <span class="toc_toggle">[<a class="ex">Ẩn</a>]</span></p><ol class='mucluc'><li><a title='#cc_thng_tin_can_thiet_khi_dat_may_o_bng_chuyen_theo_yu_cau_-_o_bng_chuyen_thiet_ke_theo_yu_cau'>Chuẩn bị khi đặt may</a></li><li><a title='#chi_tiet_o_bng_chuyen_may_theo_yu_cau_thiet_ke'>Thông số Golden Shield</a></li><li><a title='#bang_gi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke'>Bảng gi&aacute; đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.&nbsp;</a></li><li><a title='#dny_sport_cam_ket_voi_khch_hng'>DNY Sport Cam kết với kh&aacute;ch h&agrave;ng.</a></li><li><a title='#loi_ch_khi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke'>Lợi &iacute;ch khi đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.</a></li><li><a title='#dny_sport_don_vi_tin_phong_trong_linh_vuc_dat_may_quan_o_bng_chuyen_theo_yu_cau_thiet_ke'>DNY sport đơn vị ti&ecirc;n phong trong lĩnh vực đặt may quần &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.</a></li><li><a title='#dny_sport_dong_hnh_cng_cc_shop_lm_nn_thuong_hieu_thoi_trang_ring_cho_shop_quan_o_the_thao'>DNY sport đồng h&agrave;nh c&ugrave;ng c&aacute;c Shop l&agrave;m n&ecirc;n thương hiệu thời trang ri&ecirc;ng cho Shop quần &aacute;o thể thao.</a></li></ol></li></ol></div><section class="gs-guide">
+			<div class="wap_ml"><p class="tt_ml">Tóm tắt nội dung <span class="toc_toggle">[<a class="ex">Ẩn</a>]</span></p><ol class='mucluc'><li><a title='#cc_thng_tin_can_thiet_khi_dat_may_o_bng_chuyen_theo_yu_cau_-_o_bng_chuyen_thiet_ke_theo_yu_cau'>Chuẩn bị khi đặt may</a></li><li><a title='#chi_tiet_o_bng_chuyen_may_theo_yu_cau_thiet_ke'>Thông số Golden Shield</a></li><li><a title='#bang_gi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke'>Báo giá đặt may áo bóng chuyền</a></li><li><a title='#dny_sport_cam_ket_voi_khch_hng'>Cam kết của DNY SPORT</a></li><li><a title='#loi_ch_khi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke'>Lợi ích khi đặt may riêng</a></li><li><a title='#dny_sport_don_vi_tin_phong_trong_linh_vuc_dat_may_quan_o_bng_chuyen_theo_yu_cau_thiet_ke'>Xưởng may DNY SPORT</a></li><li><a title='#dny_sport_dong_hnh_cng_cc_shop_lm_nn_thuong_hieu_thoi_trang_ring_cho_shop_quan_o_the_thao'>Đặt may cho thương hiệu của shop</a></li></ol></li></ol></div><section class="gs-guide">
   <h2 id="cc_thng_tin_can_thiet_khi_dat_may_o_bng_chuyen_theo_yu_cau_-_o_bng_chuyen_thiet_ke_theo_yu_cau">Chuẩn bị khi đặt may</h2>
   <div class="gs-prep">
     <div><h3>Chọn mẫu áo</h3><p>Chọn Golden Shield hoặc gửi ảnh tham khảo, bản thiết kế hay bản vẽ tay của đội.</p><a href="https://dny.com.vn/ao-bong-chuyen.html">Xem các mẫu áo bóng chuyền</a></div>
@@ -1943,49 +1958,42 @@ $(document).on('click', '#lightbox-custom', function (e) {
     </dl></details></div>
     <figure><img src="/upload/images/ao-bong-chuyen-dep-thiet-ke-theo-yeu-cau-dny-vb2611050065-4(2).jpg" alt="Thiết kế mặt trước và mặt sau áo bóng chuyền Golden Shield vàng phối đen"><figcaption>Golden Shield – Bản lĩnh từ sắc vàng mạnh mẽ.</figcaption></figure>
   </div>
-</section><h2 id="bang_gi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke">
-	Bảng gi&aacute; đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.&nbsp;</h2>
-<p style="margin-left: 40px;">
-	<span style="font-size: 16px;">Bảng gi&aacute; &aacute;o b&oacute;ng chuyền tương ứng từng chất liệu vải v&agrave; c&aacute;c y&ecirc;u cầu kh&aacute;c nhau của kh&aacute;ch h&agrave;ng.</span></p>
-<p style="margin-left: 40px;">
-	<span style="font-size: 16px;">H&atilde;y li&ecirc;n hệ với ch&uacute;ng t&ocirc;i để nhận tư vấn v&agrave; b&aacute;o gi&aacute;.</span></p>
-<h2 id="dny_sport_cam_ket_voi_khch_hng">
-	DNY Sport Cam kết với kh&aacute;ch h&agrave;ng.</h2>
-<p style="margin-left: 40px;">
-	<span style="font-size: 16px;">Giao h&agrave;ng đ&uacute;ng thời gian,</span></p>
-<p style="margin-left: 40px;">
-	<span style="font-size: 16px;">Đ&uacute;ng số lượng,</span></p>
-<p style="margin-left: 40px;">
-	<span style="font-size: 16px;">Đ&uacute;ng size,</span></p>
-<p style="margin-left: 40px;">
-	<span style="font-size: 16px;">Đ&uacute;ng chất lượng,</span></p>
-<p style="margin-left: 40px;">
-	<span style="font-size: 16px;">Đ&uacute;ng thiết kế đ&atilde; duyệt,</span></p>
-<p style="margin-left: 40px;">
-	<span style="font-size: 16px;">Đ&uacute;ng chất liệu vải đ&atilde; chọn,</span></p>
-<p style="margin-left: 40px;">
-	<span style="font-size: 16px;">In ấn sắc n&eacute;t.</span></p>
-<h2 id="loi_ch_khi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke">
-	Lợi &iacute;ch khi đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.</h2>
-<p style="margin-left: 40px;">
-	<span style="font-size: 16px;">Được hổ trợ tư vấn nhiệt t&igrave;nh để lưa chọn mẫu m&atilde;, kiểu d&aacute;ng, chất liệu vải ph&ugrave; hợp.</span></p>
-<p style="margin-left: 40px;">
-	&nbsp;<span style="font-size: 16px;">C&oacute; nhiều sự lựa chọn về m&agrave;u sắc, chất liệu vải, in ấn logo, font chữ, font số v&agrave; h&igrave;nh ảnh theo sở th&iacute;ch của m&igrave;nh.</span></p>
-<p style="margin-left: 40px;">
-	&nbsp;<span style="font-size: 16px;">Kh&ocirc;ng lo lắng khi th&agrave;nh vi&ecirc;n của đội b&oacute;ng m&igrave;nh c&oacute; th&acirc;n h&igrave;nh cao lớn hoặc ngoại cỡ.&nbsp;</span></p>
-<p style="margin-left: 40px;">
-	&nbsp;<span style="font-size: 16px;">Với h&igrave;nh thức đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu tại DNY Sport sẽ mang đến cho bạn những thiết kế mới lạ, kh&ocirc;ng đụng h&agrave;ng.</span></p>
-<h2 id="dny_sport_don_vi_tin_phong_trong_linh_vuc_dat_may_quan_o_bng_chuyen_theo_yu_cau_thiet_ke">
-	DNY sport đơn vị ti&ecirc;n phong trong lĩnh vực đặt may quần &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.</h2>
-<p style="text-align: justify; margin-left: 40px;">
-	<span style="font-size: 16px;"><a href="https://dny.com.vn/gioi-thieu-cong-ty.html"><span style="color: rgb(0, 0, 255);">C&ocirc;ng ty TNHH may mặc Đạt Như &Yacute;</span></a> với thương hiệu DNY sport tự h&agrave;o l&agrave; đơn vị ti&ecirc;n phong trong lĩnh vực đặt may quần &aacute;o b&oacute;ng chuyền thiết kế theo y&ecirc;u cầu của kh&aacute;ch h&agrave;ng. Với DNY sport th&igrave; uy t&iacute;n, chất lượng, thời gian v&agrave; sự h&agrave;i l&ograve;ng của kh&aacute;ch h&agrave;ng lu&ocirc;n l&agrave; yếu tố được đặt l&ecirc;n h&agrave;ng đầu. <strong style="font-size: 14px;">DNY sport </strong>c&oacute; xưởng may với quy m&ocirc; rộng lớn, hệ thống m&aacute;y m&oacute;c hiện đại. C&ugrave;ng với đ&oacute; l&agrave; đội ngũ thiết kế tốt nghiệp đại học chuy&ecirc;n ng&agrave;nh c&ocirc;ng nghệ may đầy nhiệt huyết v&agrave; s&aacute;ng tạo, đội ngũ c&ocirc;ng nh&acirc;n l&agrave;nh nghề, ch&uacute;ng t&ocirc;i c&oacute; thể sẵn s&agrave;ng đ&aacute;p ứng được mọi đơn h&agrave;ng, kể cả những đơn h&agrave;ng c&oacute; số lượng lớn, <strong><em>Số lượng tối thiểu cho một đơn h&agrave;ng l&agrave; 6 bộ, thời gian giao h&agrave;ng từ 5-7 ng&agrave;y.</em></strong>&nbsp;</span></p>
-<p style="text-align: justify; margin-left: 40px;">
-	<em><span style="font-size: 16px;">Đặc biệt, Đạt Như &Yacute; c&oacute; thể hỗ trợ nhanh cho c&aacute;c đơn h&agrave;ng gấp chỉ trong v&ograve;ng 36 tiếng từ kh&acirc;u thiết kế cho đến in ấn, may th&agrave;nh phẩm.., kh&aacute;ch h&agrave;ng c&oacute; thể bổ sung đơn h&agrave;ng từ một bộ trở l&ecirc;n sau khi đơn h&agrave;ng đ&atilde; ho&agrave;n tất v&agrave;o bất cứ thời gian n&agrave;o. Điều n&agrave;y mang đến sự tiện lợi v&agrave; h&agrave;i l&ograve;ng cho mọi đối t&aacute;c, kh&aacute;ch h&agrave;ng.</span></em></p>
-<h2 id="dny_sport_dong_hnh_cng_cc_shop_lm_nn_thuong_hieu_thoi_trang_ring_cho_shop_quan_o_the_thao">
-	DNY sport đồng h&agrave;nh c&ugrave;ng c&aacute;c Shop l&agrave;m n&ecirc;n thương hiệu thời trang ri&ecirc;ng cho Shop quần &aacute;o thể thao.</h2>
-<div style="text-align: justify; margin-left: 40px;">
-	<span style="font-size: 16px;">Khi c&aacute;c shop đặt may quần &aacute;o b&oacute;ng chuyền tại DNY sport. Ngo&agrave;i việc c&aacute;c shop cung cấp mẫu m&atilde;, th&ocirc;ng tin in ấn như logo, t&ecirc;n đội, số &aacute;o v&agrave; quần, &hellip;C&aacute;c&nbsp; Shop gửi cho ch&uacute;ng t&ocirc;i nh&atilde;n cổ, d&acirc;y cổ, m&aacute;c h&ocirc;ng, t&uacute;i b&oacute;ng đ&oacute;ng g&oacute;i mang th&ocirc;ng tin thương hiệu của Shop, DNY sport sẽ cho may đ&iacute;nh k&egrave;m v&agrave;o sản phẩm.&nbsp; C&oacute; thể n&oacute;i, <strong style="font-size: 14px;">DNY sport</strong> giống như xưởng may ri&ecirc;ng của Shop để đ&aacute;p ứng mọi nhu cầu của kh&aacute;ch h&agrave;ng. Shop sẽ nhanh ch&oacute;ng c&oacute; được những sản phẩm đặc trưng cho thương hiệu của m&igrave;nh. <a href="https://dny.com.vn/ly-do-chon-chung-toi.html"><span style="color: rgb(0, 0, 255);">Ch&uacute;ng t&ocirc;i lu&ocirc;n đồng h&agrave;nh c&ugrave;ng c&aacute;c shop để x&acirc;y dựng thương hiệu thời trang thể thao của ri&ecirc;ng bạn</span></a>.</span><span style="font-size: 16px;">&nbsp;</span></div>
-<div style="text-align: justify;">
+</section><div class="gs-guide gs-order">
+  <section class="gs-quote">
+    <h2 id="bang_gi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke">Báo giá đặt may áo bóng chuyền</h2>
+    <p>Giá phụ thuộc vào chất liệu vải và yêu cầu thiết kế. Gửi mẫu áo bạn thích để DNY tư vấn và báo giá cho đội.</p>
+    <div class="gs-actions">
+      <a href="tel:+84909362079">Gọi 0909 362 079</a>
+      <a href="https://zalo.me/0909362079" target="_blank" rel="noopener">Nhận báo giá qua Zalo</a>
+    </div>
+  </section>
+  <div class="gs-order-grid">
+    <section>
+      <h2 id="dny_sport_cam_ket_voi_khch_hng">Cam kết của DNY SPORT</h2>
+      <ul><li>Giao đúng hẹn, đủ số lượng và đúng size.</li>
+        <li>May đúng thiết kế đã duyệt, đúng chất liệu vải đã chọn.</li>
+        <li>Đảm bảo chất lượng thành phẩm và độ sắc nét của hình in.</li></ul>
+    </section>
+    <section>
+      <h2 id="loi_ch_khi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke">Lợi ích khi đặt may riêng</h2>
+      <ul><li>Được tư vấn kiểu dáng và chất liệu phù hợp với đội.</li>
+        <li>Tự chọn màu áo, logo, hình in, kiểu chữ và số để tạo mẫu riêng.</li>
+        <li>Chọn size cho từng thành viên, kể cả người cao lớn hoặc cần size ngoại cỡ.</li></ul>
+    </section>
+    <section>
+      <h2 id="dny_sport_don_vi_tin_phong_trong_linh_vuc_dat_may_quan_o_bng_chuyen_theo_yu_cau_thiet_ke">Xưởng may DNY SPORT</h2>
+      <p><a href="https://dny.com.vn/gioi-thieu-cong-ty.html">Công ty TNHH May Mặc Đạt Như Ý</a> có xưởng may, đội ngũ thiết kế chuyên ngành công nghệ may và thợ may lành nghề, đáp ứng cả đơn số lượng lớn.</p>
+      <p><strong>Thời gian giao hàng:</strong> 5–7 ngày. Với đơn gấp, xưởng có thể hỗ trợ thiết kế, in và may trong 36 giờ. Liên hệ để xác nhận lịch cho đơn của bạn.</p>
+      <p>DNY nhận đặt từ 1 áo. Khi đội cần đặt bổ sung, giá mỗi áo giữ như đơn đầu tiên.</p>
+    </section>
+    <section>
+      <h2 id="dny_sport_dong_hnh_cng_cc_shop_lm_nn_thuong_hieu_thoi_trang_ring_cho_shop_quan_o_the_thao">Đặt may cho thương hiệu của shop</h2>
+      <p>Shop gửi mẫu thiết kế, logo, tên đội và số cần in trên áo, quần. Xưởng may theo mẫu và gắn nhãn cổ, dây cổ, mác hông do shop cung cấp.</p>
+      <p>Thành phẩm có thể đóng gói bằng túi mang thương hiệu riêng của shop.</p>
+      <a href="https://dny.com.vn/ly-do-chon-chung-toi.html">Tìm hiểu về hợp tác với DNY SPORT</a>
+    </section>
+  </div>
+</div><div style="text-align: justify;">
 	&nbsp;</div>
 <div style="text-align: justify;">
 	<span style="font-size: 16px;">Ngo&agrave;i đặt may quần &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu kh&aacute;ch h&agrave;ng, </span><span style="font-size: 16px;">DNY sport </span><span style="font-size: 16px;">nhận đặt may c&aacute;c loại </span><a href="https://dny.com.vn/" style="font-size: 16px;"><span style="color: rgb(0, 0, 255);">quần &aacute;o thể thao</span></a><span style="font-size: 16px;"> theo y&ecirc;u cầu như :</span></div>
