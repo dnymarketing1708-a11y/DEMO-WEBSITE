@@ -155,7 +155,8 @@ setTimeout(function() {
 .gs-order-grid li { display: list-item; list-style: disc; font-size: 15px; line-height: 1.55; margin-bottom: 6px; }
 .gs-order-grid li::marker { color: #0759ae; }
 .gs-order p + p, .gs-order p + a { margin-top: 10px; }
-.gs-order-grid p + a { display: inline-block; }
+.gs-order-grid p + a { display: inline-flex; align-items: center; min-height: 40px; margin-top: 8px; padding: 8px 12px; border: 1px solid #b8cce4; border-radius: 6px; background: #f5f9ff; color: #064f9e; font-size: 15px; font-weight: 700; line-height: 1.35; text-decoration: none; }
+.gs-order-grid p + a:hover, .gs-order-grid p + a:focus-visible { border-color: #0759ae; background: #eaf2ff; text-decoration: underline; }
 .gs-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .gs-actions a { padding: 8px 14px; border: 1px solid #0759ae; border-radius: 5px; font-weight: 600; }
 .gs-actions a:last-child { color: white; background: #0759ae; }
