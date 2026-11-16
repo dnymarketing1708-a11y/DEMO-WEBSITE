@@ -125,6 +125,25 @@ setTimeout(function() {
   .ct_pro .row-product { grid-template-columns: minmax(0, 1fr); gap: 18px; }
 }
 </style>
+<style>
+.gs-guide { background: white; margin: 24px 0 32px; color: #20242a; }
+.gs-guide h2 { font-size: 23px; font-weight: 700; color: #15191e; margin: 28px 0 14px; }
+.gs-guide .gs-prep, .gs-guide .gs-specs { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px 28px; }
+.gs-prep > div { border-top: 1px solid #dce2eb; padding: 14px 0 4px; }
+.gs-guide h3 { margin: 0 0 6px; font-size: 17px; font-weight: 700; }
+.gs-guide p, .gs-guide dd, .gs-guide dt { margin: 0; font-size: 15px; line-height: 1.5; }
+.gs-guide a, .gs-guide summary { color: #0759ae; }
+.gs-guide .gs-specs { align-items: start; }
+.gs-guide dl { display: grid; grid-template-columns: minmax(95px, 35%) 1fr; margin: 0; }
+.gs-guide dt, .gs-guide dd { padding: 7px 0; border-top: 1px solid #e3e7eb; }
+.gs-guide dt { padding-right: 10px; font-weight: 600; }
+.gs-guide summary { cursor: pointer; font-weight: 600; padding: 12px 0; }
+.gs-guide figure { margin: 0; }
+.gs-guide figure img { display: block; width: 100%; height: auto; }
+.gs-guide figcaption { margin-top: 6px; font-size: 14px; text-align: center; }
+#goi-y-size { scroll-margin-top: 80px; }
+@media(max-width: 767px) { .gs-guide .gs-prep, .gs-guide .gs-specs { grid-template-columns: 1fr; } }
+</style>
 </head>
 
 <body>
@@ -1190,7 +1209,7 @@ setTimeout(function() {
                                 </div>
                                 
                                 
-                                <div class="sizebox"><!-- COMPONENT CHỌN SIZE -->
+                                <div class="sizebox" id="goi-y-size" tabindex="-1"><!-- COMPONENT CHỌN SIZE -->
         
                 <div class="size-suggestion-widget"
                                     style="margin: 20px 0; font-family: 'Be Vietnam Pro', sans-serif;">
@@ -1894,69 +1913,37 @@ $(document).on('click', '#lightbox-custom', function (e) {
 					});
 				});
 			</script>
-			<div class="wap_ml"><p class="tt_ml">Tóm tắt nội dung <span class="toc_toggle">[<a class="ex">Ẩn</a>]</span></p><ol class='mucluc'><li><a title='#cc_thng_tin_can_thiet_khi_dat_may_o_bng_chuyen_theo_yu_cau_-_o_bng_chuyen_thiet_ke_theo_yu_cau'><strong>C&aacute;c th&ocirc;ng tin cần thiết khi đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu - &Aacute;o b&oacute;ng chuyền thiết kế theo y&ecirc;u cầu.&nbsp;</strong></a></li><li><a title='#chi_tiet_o_bng_chuyen_may_theo_yu_cau_thiet_ke'>Chi tiết &aacute;o b&oacute;ng chuyền may theo y&ecirc;u cầu thiết kế.&nbsp;<span style="font-size: 12px;">&nbsp;</span></a></li><li><a title='#bang_gi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke'>Bảng gi&aacute; đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.&nbsp;</a></li><li><a title='#dny_sport_cam_ket_voi_khch_hng'>DNY Sport Cam kết với kh&aacute;ch h&agrave;ng.</a></li><li><a title='#loi_ch_khi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke'>Lợi &iacute;ch khi đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.</a></li><li><a title='#dny_sport_don_vi_tin_phong_trong_linh_vuc_dat_may_quan_o_bng_chuyen_theo_yu_cau_thiet_ke'>DNY sport đơn vị ti&ecirc;n phong trong lĩnh vực đặt may quần &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.</a></li><li><a title='#dny_sport_dong_hnh_cng_cc_shop_lm_nn_thuong_hieu_thoi_trang_ring_cho_shop_quan_o_the_thao'>DNY sport đồng h&agrave;nh c&ugrave;ng c&aacute;c Shop l&agrave;m n&ecirc;n thương hiệu thời trang ri&ecirc;ng cho Shop quần &aacute;o thể thao.</a></li></ol></li></ol></div><h2 style="text-align: justify;" id="cc_thng_tin_can_thiet_khi_dat_may_o_bng_chuyen_theo_yu_cau_-_o_bng_chuyen_thiet_ke_theo_yu_cau">
-	<strong>C&aacute;c th&ocirc;ng tin cần thiết khi đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu - &Aacute;o b&oacute;ng chuyền thiết kế theo y&ecirc;u cầu.&nbsp;</strong></h2>
-<ul style="margin-left: 40px;">
-	<li style="text-align: justify;">
-		<p>
-			<span style="font-size: 16px;"><strong>Chọn mẫu &aacute;o cần đặt may :</strong> Chọn mẫu hiện tại đang xem hoặc tham khảo c&aacute;c <a href="https://dny.com.vn/ao-bong-chuyen.html"><span style="color: rgb(0, 0, 255);"><em>mẫu &aacute;o b&oacute;ng chuyền</em></span></a> của DNY sport hoặc t&igrave;m kiếm tr&ecirc;n internet c&aacute;c mẫu &aacute;o b&oacute;ng chuyền y&ecirc;u th&iacute;ch hoặc tự thiết kế tr&ecirc;n m&aacute;y vi t&iacute;nh hoặc vẽ tay theo &yacute; tưởng của m&igrave;nh.</span></p>
-	</li>
-	<li style="text-align: justify;">
-		<p>
-			<span style="font-size: 16px;"><strong>Cung cấp c&aacute;c chi tiết in tr&ecirc;n &aacute;o v&agrave; quần :</strong> Logo cty, logo đội, logo clb, logo nh&agrave; t&agrave;i trợ, t&ecirc;n đội, danh s&aacute;ch t&ecirc;n v&agrave; số in tr&ecirc;n &aacute;o v&agrave; quần, font chữ, font số, &hellip;. Tham khảo c&aacute;c bộ font số, font chữ đẹp <a href="https://dny.com.vn/font-so-chu.html"><span style="color: rgb(0, 0, 255);">tại đ&acirc;y</span></a>.</span></p>
-	</li>
-	<li style="text-align: justify;">
-		<p>
-			<span style="font-size: 16px;"><strong>Chọn chất liệu vải : </strong>DNY sport đa dạng rất nhiều loại vải thể thao kh&aacute;c nhau để kh&aacute;ch h&agrave;ng c&oacute; th&ecirc;m nhiều sự lựa chọn cho m&igrave;nh <a href="https://datnhuy.vn/vai-thun-the-thao.html"><span style="color: rgb(0, 0, 255);"><em>xem chi tiết tại đ&acirc;y</em></span></a>.</span></p>
-	</li>
-	<li style="text-align: justify;">
-		<p>
-			<span style="font-size: 16px;"><strong>Chọn size &aacute;o : </strong>Nam-nữ XS / S / M / L / XL /.../ 10XL, &aacute;o trẻ em 1 / 3 / 5 / 7 / 9 / 11 /13.</span></p>
-	</li>
-</ul>
-<h2 id="chi_tiet_o_bng_chuyen_may_theo_yu_cau_thiet_ke">
-	Chi tiết &aacute;o b&oacute;ng chuyền may theo y&ecirc;u cầu thiết kế.&nbsp;<span style="font-size: 12px;">&nbsp;</span></h2>
-<ul style="margin-left: 40px;">
-	<li>
-		<span style="font-size: 16px;"><strong>M&atilde; sản phẩm</strong> : DNY-VB2611080068.</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Xuất xứ</strong> : Việt Nam.</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Đơn vị sản xuất</strong> : <a href="https://dny.com.vn/gioi-thieu-cong-ty.html"><span style="color: rgb(0, 0, 255);">C&ocirc;ng ty TNHH May Mặc Đạt Như &Yacute;.</span></a></span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>In ấn</strong> : C&ocirc;ng nghệ in chuyển nhiệt.</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Chất liệu vải </strong>: </span><a href="https://dny.com.vn/vai-thun-lanh-cao-cap.html" style="font-size: 16px;"><span style="color: rgb(0, 0, 255);">Vải thun lạnh</span></a><span style="font-size: 16px; color: rgb(0, 0, 255);">, </span><a href="https://dny.com.vn/vai-thun-me-thai.html" style="font-size: 16px;"><span style="color: rgb(0, 0, 255);">vải m&egrave;</span></a><span style="font-size: 16px; color: rgb(0, 0, 255);">, </span><a href="https://dny.com.vn/vai-thun-me-han-quoc.html" style="font-size: 16px;"><span style="color: rgb(0, 0, 255);">vải m&egrave; H&agrave;n Quốc</span></a><span style="font-size: 16px; color: rgb(0, 0, 255);">...</span></li>
-	<li>
-		<strong style="font-size: 16px;">M&agrave;u&nbsp; chủ đạo</strong><span style="font-size: 16px;"> : V&agrave;ng,Đen.</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Form &aacute;o</strong> : Su&ocirc;n.</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Cổ &aacute;o</strong> : Tim - In chuyển.</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</li>
-	<li>
-		<span style="font-size: 16px;"><strong>Tay</strong> : Tay thường - In chuyển.&nbsp;</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Bo tay: </strong>In chuyển.&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>H&ocirc;ng &aacute;o</strong> : N/a.</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Th&acirc;n trước</strong> : In chuyển nhiệt họa tiết giống mẫu.&nbsp;</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Th&acirc;n sau</strong> :&nbsp; In chuyển nhiệt họa tiết giống mẫu.</span></li>
-	<li>
-		<strong style="font-size: 16px;">Lai &aacute;o</strong><span style="font-size: 16px;"> : Lai ngang.&nbsp;</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Quần</strong> : In chuyển.</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Lưng quần</strong> : N/a.&nbsp;</span></li>
-	<li>
-		<span style="font-size: 16px;"><strong>Size &aacute;o</strong> : Nam / nữ / trẻ em.</span></li>
-</ul>
-<p style="text-align: center;">
-	<span style="text-align: right;">&nbsp;<img alt="Mặt trước và sau áo bóng chuyền vàng tươi, tay áo đen, họa tiết đường chéo sắc nhọn ở hai bên thân" src="/upload/images/ao-bong-chuyen-dep-thiet-ke-theo-yeu-cau-dny-vb2611050065-4(2).jpg" style="width: 1300px; height: 615px;" title="Mẫu áo bóng chuyền Golden Shield vàng phối đen" /></span></p>
-<h3 style="text-align: center;">
-	<em><span style="font-size: 16px;">&nbsp;Golden Shield &ndash; Bản lĩnh từ sắc v&agrave;ng mạnh mẽ.</span></em></h3>
-<h2 id="bang_gi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke">
+			<div class="wap_ml"><p class="tt_ml">Tóm tắt nội dung <span class="toc_toggle">[<a class="ex">Ẩn</a>]</span></p><ol class='mucluc'><li><a title='#cc_thng_tin_can_thiet_khi_dat_may_o_bng_chuyen_theo_yu_cau_-_o_bng_chuyen_thiet_ke_theo_yu_cau'>Chuẩn bị khi đặt may</a></li><li><a title='#chi_tiet_o_bng_chuyen_may_theo_yu_cau_thiet_ke'>Thông số Golden Shield</a></li><li><a title='#bang_gi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke'>Bảng gi&aacute; đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.&nbsp;</a></li><li><a title='#dny_sport_cam_ket_voi_khch_hng'>DNY Sport Cam kết với kh&aacute;ch h&agrave;ng.</a></li><li><a title='#loi_ch_khi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke'>Lợi &iacute;ch khi đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.</a></li><li><a title='#dny_sport_don_vi_tin_phong_trong_linh_vuc_dat_may_quan_o_bng_chuyen_theo_yu_cau_thiet_ke'>DNY sport đơn vị ti&ecirc;n phong trong lĩnh vực đặt may quần &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.</a></li><li><a title='#dny_sport_dong_hnh_cng_cc_shop_lm_nn_thuong_hieu_thoi_trang_ring_cho_shop_quan_o_the_thao'>DNY sport đồng h&agrave;nh c&ugrave;ng c&aacute;c Shop l&agrave;m n&ecirc;n thương hiệu thời trang ri&ecirc;ng cho Shop quần &aacute;o thể thao.</a></li></ol></li></ol></div><section class="gs-guide">
+  <h2 id="cc_thng_tin_can_thiet_khi_dat_may_o_bng_chuyen_theo_yu_cau_-_o_bng_chuyen_thiet_ke_theo_yu_cau">Chuẩn bị khi đặt may</h2>
+  <div class="gs-prep">
+    <div><h3>Chọn mẫu áo</h3><p>Chọn Golden Shield hoặc gửi ảnh tham khảo, bản thiết kế hay bản vẽ tay của đội.</p><a href="https://dny.com.vn/ao-bong-chuyen.html">Xem các mẫu áo bóng chuyền</a></div>
+    <div><h3>Chuẩn bị nội dung in</h3><p>Gửi logo đội, công ty hoặc nhà tài trợ, tên đội, danh sách tên và số cần in trên áo, quần.</p><a href="https://dny.com.vn/font-so-chu.html">Xem font chữ và số</a></div>
+    <div><h3>Chọn chất liệu</h3><p>Chọn loại vải phù hợp với nhu cầu tập luyện và thi đấu của đội.</p><a href="https://datnhuy.vn/vai-thun-the-thao.html">Xem các loại vải thể thao</a></div>
+    <div><h3>Chọn size</h3><p>Size nam, nữ từ XS đến 10XL. Size trẻ em gồm 1, 3, 5, 7, 9, 11 và 13.</p><a href="https://dnymarketing1708-a11y.github.io/DEMO-WEBSITE/chi-tiet-san-pham.html#goi-y-size" onclick="document.getElementById('goi-y-size').focus(); return false;">Gợi ý size theo chiều cao và cân nặng</a></div>
+  </div>
+  <h2 id="chi_tiet_o_bng_chuyen_may_theo_yu_cau_thiet_ke">Thông số Golden Shield</h2>
+  <div class="gs-specs">
+    <div><dl>
+      <dt>Mã sản phẩm</dt><dd>DNY-VB2611080068</dd>
+      <dt>Màu chủ đạo</dt><dd>Vàng phối đen</dd>
+      <dt>Form áo</dt><dd>Suông</dd>
+      <dt>Cổ áo</dt><dd>Cổ tim, in chuyển nhiệt</dd>
+      <dt>Chất liệu</dt><dd><a href="https://dny.com.vn/vai-thun-lanh-cao-cap.html">Thun lạnh</a>, <a href="https://dny.com.vn/vai-thun-me-thai.html">vải mè</a>, <a href="https://dny.com.vn/vai-thun-me-han-quoc.html">vải mè Hàn Quốc</a></dd>
+      <dt>Công nghệ in</dt><dd>In chuyển nhiệt</dd>
+    </dl>
+    <details><summary>Xem chi tiết may và sản xuất</summary><dl>
+      <dt>Tay áo và bo tay</dt><dd>Tay thường, in chuyển nhiệt cả tay và bo tay.</dd>
+      <dt>Thân trước và sau</dt><dd>In chuyển nhiệt họa tiết theo mẫu.</dd>
+      <dt>Lai áo</dt><dd>Lai ngang</dd>
+      <dt>Quần</dt><dd>In chuyển nhiệt</dd>
+      <dt>Hông áo và lưng quần</dt><dd>N/a</dd>
+      <dt>Size áo</dt><dd>Nam, nữ và trẻ em</dd>
+      <dt>Xuất xứ</dt><dd>Việt Nam</dd>
+      <dt>Đơn vị sản xuất</dt><dd><a href="https://dny.com.vn/gioi-thieu-cong-ty.html">Công ty TNHH May Mặc Đạt Như Ý</a></dd>
+    </dl></details></div>
+    <figure><img src="/upload/images/ao-bong-chuyen-dep-thiet-ke-theo-yeu-cau-dny-vb2611050065-4(2).jpg" alt="Thiết kế mặt trước và mặt sau áo bóng chuyền Golden Shield vàng phối đen"><figcaption>Golden Shield – Bản lĩnh từ sắc vàng mạnh mẽ.</figcaption></figure>
+  </div>
+</section><h2 id="bang_gi_dat_may_o_bng_chuyen_theo_yu_cau_thiet_ke">
 	Bảng gi&aacute; đặt may &aacute;o b&oacute;ng chuyền theo y&ecirc;u cầu thiết kế.&nbsp;</h2>
 <p style="margin-left: 40px;">
 	<span style="font-size: 16px;">Bảng gi&aacute; &aacute;o b&oacute;ng chuyền tương ứng từng chất liệu vải v&agrave; c&aacute;c y&ecirc;u cầu kh&aacute;c nhau của kh&aacute;ch h&agrave;ng.</span></p>
