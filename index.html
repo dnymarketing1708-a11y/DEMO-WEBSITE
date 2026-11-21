@@ -703,12 +703,8 @@ nav.dny-shared-navigation .dny-nav-favorites b{position:absolute;right:-1px;top:
    if (event.target === popup && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) popup.close();
  });
  popup.addEventListener('close', () => { document.documentElement.classList.remove('province-open'); });
- // Section links (such as #san-pham) should land directly on their target,
- // without the province popup covering the page.
- if (typeof popup.showModal === 'function' && !location.hash) {
-   popup.showModal();
-   document.documentElement.classList.add('province-open');
- }
+ // Keep the province campaign available by its link, but do not open it
+ // automatically: it can cover section destinations such as #san-pham.
 })();
 </script><script>(()=>{const rail=document.querySelector('.dny-section-rail');if(!rail)return;const links=[...rail.querySelectorAll('a[href^="#"]')];const targets=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);const activate=(target)=>{for(const link of links){if(link.getAttribute('href')==='#'+target.id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')}};if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);if(visible[0])activate(visible[0].target)},{rootMargin:'-35% 0px -55% 0px',threshold:[0,.2,.5,1]});targets.forEach(target=>observer.observe(target))}links.forEach(link=>link.addEventListener('click',()=>{const target=document.querySelector(link.getAttribute('href'));if(target)activate(target)}))})();</script>
 </html>
