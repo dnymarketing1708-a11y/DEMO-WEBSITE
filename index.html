@@ -703,7 +703,8 @@ nav.dny-shared-navigation .dny-nav-favorites b{position:absolute;right:-1px;top:
    if (event.target === popup && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) popup.close();
  });
  popup.addEventListener('close', () => { document.documentElement.classList.remove('province-open'); });
- if (typeof popup.showModal === 'function') {
+ const hasHashTarget = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+ if (typeof popup.showModal === 'function' && !hasHashTarget) {
    popup.showModal();
    document.documentElement.classList.add('province-open');
  }
